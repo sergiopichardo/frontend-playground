@@ -24,7 +24,7 @@ function ConnectMessage() {
                     </span>
                     <span>Connect</span>
                 </button>
-                <button className="bg-orange-100 text-orange-500 hover:bg-orange-200 font-medium px-4 py-2 rounded flex items-center space-x-2 transition">
+                <button className="bg-orange-100 text-orange-500 hover:text-orange-600 hover:bg-orange-200 font-medium px-4 py-2 rounded flex items-center space-x-2 transition">
                     <span className="p-1 bg-orange-500 rounded-full">
                         <FaSoundcloud className="text-white" />
                     </span>
