@@ -22,12 +22,12 @@ function PartyMode({ media }: PartyModeProps) {
                 }}
             >
                 
-                <button 
+                <div 
                     className="flex items-center bg-gradient-to-r from-orange-400 to-pink-500 rounded-md uppercase py-1.5 px-3 space-x-2 text-sm text-white tracking-wider z-10 hover:bg-red-500 self-start"
                 >
                     <GiPartyPopper className="w-4 h-4" />
                     <span>Party Mode</span>
-                </button>
+                </div>
 
                 <div className="flex items-center space-x-2 mt-auto">
                     <span className="p-1 bg-red-500 rounded-full w-8 h-8 flex items-center justify-center">
@@ -58,22 +58,22 @@ function PartyMode({ media }: PartyModeProps) {
                 </div>
 
                 <div className="flex">
-                    <div className="flex pl-2 items-center">
+                    <div className="flex pl-4 items-center">
                         {media.groups[0].members.map((member: Member) => (
                             <img 
                                 src={member.avatar}
                                 alt={member.avatar} 
-                                className="h-12 w-12 rounded-full -ml-2 border-white border-[3px]"
+                                className="h-12 w-12 rounded-full -ml-4 border-white border-[3px]"
                             />
                         ))}
-                        <div className="h-11 w-11 p-2 bg-gray-300 rounded-full flex items-center justify-center text-gray-700 font-bold -ml-2">
+                        <div className="h-12 w-12 p-2 bg-gray-300 rounded-full flex items-center justify-center text-gray-700 font-bold -ml-4 border-white border-[3px]">
                             <span className="text-sm">
                                 +{media.groups[0].members.length}
                             </span>
                         </div>
                     </div>
 
-                    <button className="flex items-center space-x-2 ml-auto bg-green-400 py-2 px-4 self-center rounded-full">
+                    <button className="flex items-center space-x-2 ml-auto bg-green-400 py-2 px-4 self-center rounded-full hover:bg-green-500 transition">
                         <BsCameraVideoFill className="h-6 w-6 text-white" />
                         <span className="text-white">Join</span>
                     </button>
