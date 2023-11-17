@@ -1,0 +1,30 @@
+- Flex Containers 
+    - The default behavior of flex items is that they're placed *left to right in a row*.
+- Flex Grow     
+    - Determines the rate at which an element grows
+    - tells the element how much they should grow 
+    - for example `flex-grow: 1` will grow at a rate of 1
+      , but if we apply `flex-grow: 2` to another element that will grow at double the rate
+    - it will grow in comparison to the size of the sibling elements
+- Flex Shrink 
+    - Determines the rate at which an element shrinks
+    - The default is `1`
+    - the bigger the shirnk rate the more an element shrinks
+    - it will shrink in comparison to the size of the sibling elements
+- Flex Wrap
+    - wrap the content to the next line 
+- Flex Basis 
+    - `flex-basis` defines a starting width to each of the elements, in fact it's pretty similar to the `min-width` property.
+    - For example, we could set all the elements to start at `200px` like this `flex-basis: 200px`. 
+    - When you apply a `flex-grow: 1` to all sibling elements. If they have a different `flex-basis` value, they'll all grow at different rates. Because they all started at a different width. So, they'll occupy say, 100, 200, or 300 pixels respectively first when we apply `flex-basis` and then they'll occupy 100% of the rest of the space, or grow at a rate of 1 through `flex-grow`. Because they started at a different width, they'll end up at a different width.
+    - If you apply a `min-width: 500px`, and you make the viewport width smaller to the point where it's smaller than the elements. It will default to show a horizontal scrollbar to allow you to see the space.
+    - On the otherhand, if you apply `flex-basis: 500px`, it will now show a horizontal scrollbar. The elements will shrink as normal flex items. 
+- The `flex` property
+    - `flex: <flex-grow> <flex-shrink> <flex-basis>`
+    - `flex: 1;` means `flex: 1 1 0;`
+
+- Axis 
+    - Cross Axis 
+    - Order 
+- Other 
+    - `min-width` vs `width` vs `max-width`

@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #fff;
+    font-family: 'Nunito Semibold';
+    text-align: center;
+    padding: 10px;
+}
+
+#content {
+    /* default styles */
+    max-width: 960px;
+    margin: 0 auto;
+    border: 2px solid red;
+
+    /* display grid */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+#content div {
+    background: #3bbced;
+    padding: 30px;
+}
+
+#content div:nth-child(even) {
+    background: #777;
+}
+
+.nested {
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    grid-column: span 3;
+}
+
+.nested p {
+    border: 2px solid #fff;
+    padding: 20px;
+    margin: 0; 
+}

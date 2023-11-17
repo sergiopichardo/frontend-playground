@@ -1,0 +1,84 @@
+* {
+    font-family: Verdana;
+    margin: 0;
+}
+
+body {
+    background: #eee;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+/* menu base styles */
+nav {
+    background: #333;
+}
+
+nav ul {
+    list-style-type: none; 
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    display: block;
+    padding: 10px; 
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+/* Social menu base styles */
+a.tw {
+    background-color: #6CB4EE;
+    color: #fff;
+}
+
+a.fb {
+    background-color: #007FFF;
+    color: #fff;
+}
+
+.social {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* flex styles */
+ul.social {
+    /* flex: 1 1 0; */
+    align-items: center;
+    flex-grow: 1;
+}
+
+
+/* 
+    Apply this styles only when the viewport width is 768px
+*/
+@media screen and (min-width: 768px) {
+    nav ul { 
+        display: flex;
+        justify-content: start;
+    }
+
+    nav li {
+        flex: 1 1 0;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    nav ul.social {
+        display: flex;
+    }
+}
