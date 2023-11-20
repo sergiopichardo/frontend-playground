@@ -1,6 +1,7 @@
 "use client";
 
 import FindMusic from '@/components/01-find-music/find-music';
+import GroupCall from '@/components/02-group-call/group-call';
 // import ConnectMessage from '@/components/connect-message'
 // import ContactsList from '@/components/contacts/contacts-list'
 // import PartyMode from "@/components/party-mode/party-mode";
@@ -8,13 +9,13 @@ import FindMusic from '@/components/01-find-music/find-music';
 
 export default function Home() {
   return (
-    <main className="bg-gray-200 h-screen">
+    <main className="bg-gray-200 h-screen p-6">
       <div className="grid grid-cols-4 mx-6 m-auto gap-x-4">
         <div className="">
           Grid Item 1
         </div>
         <div className="grid gap-4">
-          <div>Add Callers To Group</div>
+          <GroupCall />
           <div>Calling between 2</div>
 
           <FindMusic />
