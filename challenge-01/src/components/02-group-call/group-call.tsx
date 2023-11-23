@@ -1,8 +1,9 @@
 import { faker } from '@faker-js/faker';
-import { IoCall } from 'react-icons/io5';
+import { IoCall, IoCloseCircle } from 'react-icons/io5';
 import { BiDotsHorizontalRounded } from 'react-icons/bi';
 import { IoMdClose } from "react-icons/io";
 import { ImPhoneHangUp } from "react-icons/im";
+import { CircularProgressbarWithChildren, buildStyles } from 'react-circular-progressbar';
 
 
 function GroupCall() {
@@ -22,7 +23,7 @@ function GroupCall() {
                 <div className="flex space-x-2">
                     <button className="bg-gray-200 hover:bg-gray-300 p-1 rounded-full h-10 w-10 flex items-center justify-center">
                         <BiDotsHorizontalRounded 
-                            className="text-gray-700 text-lg" 
+                            className="text-gray-700 text-2xl" 
                         />
                     </button>
                     
@@ -78,10 +79,68 @@ function GroupCall() {
                         />
                     </div>
                 ))}
-                
-                
+
+                <div style={{ width: 68, height: 68}} className="relative z-0"> 
+                    <div className="absolute top-0 -right-2 z-10 bg-white rounded-full p-1 shadow-sm shadow-gray-400">
+                        <IoMdClose className="text-xl text-gray-400" />
+                    </div>
+                    
+                    <CircularProgressbarWithChildren
+                        value={42}
+                        text={`${66}%`}
+                        strokeWidth={6}
+                        styles={{
+                                // Customize the root svg element
+                                root: {},
+                                // Customize the path, i.e. the "completed progress"
+                                path: {
+                                    // Path color
+                                    stroke: `rgba(79,203,132, ${66 / 100})`,
+                                    // Whether to use rounded or flat corners on the ends - can use 'butt' or 'round'
+                                    strokeLinecap: 'butt',
+                                    // Customize transition animation
+                                    transition: 'stroke-dashoffset 0.5s ease 0s',
+                                    // Rotate the path
+                                    transform: 'rotate(0.0turn)',
+                                    transformOrigin: 'center center',
+                                },
+                                // Customize the circle behind the path, i.e. the "total progress"
+                                trail: {
+                                    // Trail color
+                                    stroke: '#d6d6d6',
+                                    // Whether to use rounded or flat corners on the ends - can use 'butt' or 'round'
+                                    strokeLinecap: 'butt',
+                                    // Rotate the trail
+                                    transform: 'rotate(0.25turn)',
+                                    transformOrigin: 'center center',
+                                },
+                                // Customize the text
+                                text: {
+                                    // Text color
+                                    fill: '#f88',
+                                    // Text size
+                                    fontSize: '16px',
+                                },
+                                // Customize background - only used when the `background` prop is true
+                                background: {
+                                    fill: '#4fcb84 ',
+                                },
+                        }}
+                    >
+                        <div className="w-14 h-14">
+                            <img 
+                                src={faker.image.avatar()} 
+                                alt="user" 
+                                className="rounded-full"
+                            />
+                        </div>
+                </CircularProgressbarWithChildren>
+                </div>
 
                 
+                
+                {/* Gauge */}
+                {/* https://www.youtube.com/watch?v=FnUkVcQ_3CQ&ab_channel=dcode */}
             </div>
         </div>
     );

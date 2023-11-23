@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --value: ""
+}
 
 .gradient-overlay::before {
     content: "";

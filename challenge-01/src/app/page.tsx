@@ -2,6 +2,7 @@
 
 import FindMusic from '@/components/01-find-music/find-music';
 import GroupCall from '@/components/02-group-call/group-call';
+import CircularProgressBar from '@/components/ui/circular-progress-bar';
 // import ConnectMessage from '@/components/connect-message'
 // import ContactsList from '@/components/contacts/contacts-list'
 // import PartyMode from "@/components/party-mode/party-mode";
